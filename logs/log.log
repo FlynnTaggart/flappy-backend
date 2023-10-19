@@ -164,3 +164,61 @@
 		update set score = EXCLUDED.score
 		where r.score < EXCLUDED.score time=1.53575ms
 [2023-10-19 03:06:00]  INFO Query args=[Misha] commandTag=SELECT 1 pid=28 sql=select score from records where nickname = $1 time=745.667µs
+[2023-10-19 06:30:57]  INFO Connect database=flappyDB host=database pid=37 port=5432 time=23.938791ms
+[2023-10-19 06:30:57]  INFO Prepare alreadyPrepared=false name=stmtcache_1 pid=37 sql=select score from records where nickname = $1 time=3.248125ms
+[2023-10-19 06:30:57]  INFO Query args=[aboba] commandTag=SELECT 0 pid=37 sql=select score from records where nickname = $1 time=5.378833ms
+[2023-10-19 06:30:57] ERROR GetRecord: error from service err=db: GetUserRecord: error query: no rows in result set
+[2023-10-19 06:30:58]  INFO Query args=[aboba] commandTag=SELECT 0 pid=37 sql=select score from records where nickname = $1 time=1.359667ms
+[2023-10-19 06:30:58] ERROR GetRecord: error from service err=db: GetUserRecord: error query: no rows in result set
+[2023-10-19 06:30:58]  INFO Query args=[aboba] commandTag=SELECT 0 pid=37 sql=select score from records where nickname = $1 time=1.879917ms
+[2023-10-19 06:30:58] ERROR GetRecord: error from service err=db: GetUserRecord: error query: no rows in result set
+[2023-10-19 06:33:03]  INFO Prepare alreadyPrepared=false name=stmtcache_2 pid=37 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=2.752834ms
+[2023-10-19 06:33:03]  INFO Query args=[Misha 1] commandTag=INSERT 0 0 pid=37 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=9.321333ms
+[2023-10-19 06:33:10]  INFO Query args=[aboba 1] commandTag=INSERT 0 1 pid=37 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=1.661ms
+[2023-10-19 06:37:11]  INFO Connect database=flappyDB host=database pid=59 port=5432 time=25.033875ms
+[2023-10-19 06:37:11]  INFO Prepare alreadyPrepared=false name=stmtcache_3 pid=59 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=2.925458ms
+[2023-10-19 06:37:11]  INFO Query args=[abob 2] commandTag=INSERT 0 1 pid=59 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=8.122709ms
+[2023-10-19 06:37:18]  INFO Prepare alreadyPrepared=false name=stmtcache_4 pid=59 sql=select score from records where nickname = $1 time=3.097166ms
+[2023-10-19 06:37:18]  INFO Query args=[abob] commandTag=SELECT 1 pid=59 sql=select score from records where nickname = $1 time=6.506292ms
+[2023-10-19 06:37:19]  INFO Query args=[abob] commandTag=SELECT 1 pid=59 sql=select score from records where nickname = $1 time=583.208µs
+[2023-10-19 06:46:20]  INFO Connect database=flappyDB host=database pid=88 port=5432 time=19.370417ms
+[2023-10-19 06:46:20]  INFO Prepare alreadyPrepared=false name=stmtcache_5 pid=88 sql=select * from records order by score desc limit 10 time=4.840209ms
+[2023-10-19 06:49:35]  INFO Connect database=flappyDB host=database pid=98 port=5432 time=17.987ms
+[2023-10-19 06:49:35]  INFO Prepare alreadyPrepared=false name=stmtcache_6 pid=98 sql=select * from records order by score desc limit 10 time=3.102583ms
+[2023-10-19 06:50:05]  INFO Connect database=flappyDB host=database pid=101 port=5432 time=22.302333ms
+[2023-10-19 06:50:05]  INFO Prepare alreadyPrepared=false name=stmtcache_7 pid=101 sql=select * from records order by score desc limit 10 time=4.075042ms
+[2023-10-19 06:50:20]  INFO Connect database=flappyDB host=database pid=103 port=5432 time=28.958541ms
+[2023-10-19 06:50:20]  INFO Prepare alreadyPrepared=false name=stmtcache_8 pid=103 sql=select * from records order by score desc limit 10 time=2.887958ms
+[2023-10-19 06:51:16]  INFO Connect database=flappyDB host=database pid=107 port=5432 time=8.129292ms
+[2023-10-19 06:51:16]  INFO Prepare alreadyPrepared=false name=stmtcache_9 pid=107 sql=select * from records order by score desc limit 10 time=2.042666ms
+[2023-10-19 06:51:38]  INFO Connect database=flappyDB host=database pid=109 port=5432 time=18.879583ms
+[2023-10-19 06:51:38]  INFO Prepare alreadyPrepared=false name=stmtcache_10 pid=109 sql=select * from records order by score desc limit 10 time=3.384666ms
+[2023-10-19 06:52:10]  INFO Connect database=flappyDB host=database pid=111 port=5432 time=21.712625ms
+[2023-10-19 06:52:10]  INFO Prepare alreadyPrepared=false name=stmtcache_11 pid=111 sql=select * from records order by score desc limit 10 time=3.141ms
+[2023-10-19 06:53:18]  INFO Connect database=flappyDB host=database pid=116 port=5432 time=9.132875ms
+[2023-10-19 06:53:18]  INFO Prepare alreadyPrepared=false name=stmtcache_12 pid=116 sql=select * from records order by score desc limit 10 time=2.097917ms
+[2023-10-19 07:00:17]  INFO Connect database=flappyDB host=database pid=138 port=5432 time=32.427541ms
+[2023-10-19 07:00:17]  INFO Prepare alreadyPrepared=false name=stmtcache_13 pid=138 sql=select * from records order by score desc limit 10 time=2.8375ms
+[2023-10-19 07:00:39]  INFO Connect database=flappyDB host=database pid=140 port=5432 time=18.575417ms
+[2023-10-19 07:00:39]  INFO Prepare alreadyPrepared=false name=stmtcache_14 pid=140 sql=select * from records order by score desc limit 10 time=1.150333ms
+[2023-10-19 07:01:54]  INFO Connect database=flappyDB host=database pid=144 port=5432 time=26.110917ms
+[2023-10-19 07:01:54]  INFO Prepare alreadyPrepared=false name=stmtcache_15 pid=144 sql=select * from records order by score desc limit 10 time=2.102584ms
+[2023-10-19 07:02:08]  INFO Connect database=flappyDB host=database pid=146 port=5432 time=20.964959ms
+[2023-10-19 07:02:08]  INFO Prepare alreadyPrepared=false name=stmtcache_16 pid=146 sql=select * from records order by score desc limit 10 time=1.4415ms
+[2023-10-19 07:02:21]  INFO Connect database=flappyDB host=database pid=148 port=5432 time=14.750792ms
+[2023-10-19 07:02:21]  INFO Prepare alreadyPrepared=false name=stmtcache_17 pid=148 sql=select * from records order by score desc limit 10 time=2.542ms

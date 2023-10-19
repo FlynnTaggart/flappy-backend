@@ -95,7 +95,7 @@ func main() {
 	flappyHandler := handler.NewHandler(flappyService, logrusLoggerAdapter)
 
 	app := fiber.New()
-	route := app.Group("/api")
+	route := app.Group("/ api")
 	route.Post("", flappyHandler.AddRecord)
 	route.Get("", flappyHandler.GetRecord)
 	route.Get("/top10", flappyHandler.GetTop10Records)

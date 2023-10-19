@@ -2,7 +2,7 @@ version: "3"
 
 services:
   database:
-    image: postgres:alpine
+    image: postgres:13-alpine3.18
     env_file: .env
     restart: always
     ports:
