@@ -1,0 +1,166 @@
+[2023-10-19 02:26:35] ERROR Connect database=usampleDB err=failed to connect to `host=database user=flynn database=usampleDB`: failed SASL auth (FATAL: password authentication failed for user "flynn" (SQLSTATE 28P01)) host=database port=5432 time=13.303084ms
+[2023-10-19 02:26:35] ERROR AddRecord: error from service err=db: AddUserRecord: error query: failed to connect to `host=database user=flynn database=usampleDB`: failed SASL auth (FATAL: password authentication failed for user "flynn" (SQLSTATE 28P01))
+[2023-10-19 02:29:11] ERROR Connect database=usampleDB err=failed to connect to `host=database user=postgres database=usampleDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01)) host=database port=5432 time=14.22425ms
+[2023-10-19 02:29:11] ERROR AddRecord: error from service err=db: AddUserRecord: error query: failed to connect to `host=database user=postgres database=usampleDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01))
+[2023-10-19 02:31:28] ERROR Connect database=flappyDB err=failed to connect to `host=database user=postgres database=flappyDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01)) host=database port=5432 time=10.155042ms
+[2023-10-19 02:31:28] ERROR AddRecord: error from service err=db: AddUserRecord: error query: failed to connect to `host=database user=postgres database=flappyDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01))
+[2023-10-19 02:38:07] ERROR Connect database=flappyDB err=failed to connect to `host=database user=postgres database=flappyDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01)) host=database port=5432 time=12.006875ms
+[2023-10-19 02:38:07] ERROR AddRecord: error from service err=db: AddUserRecord: error query: failed to connect to `host=database user=postgres database=flappyDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01))
+[2023-10-19 02:38:07] ERROR Connect database=flappyDB err=failed to connect to `host=database user=postgres database=flappyDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01)) host=database port=5432 time=12.602292ms
+[2023-10-19 02:38:07] ERROR AddRecord: error from service err=db: AddUserRecord: error query: failed to connect to `host=database user=postgres database=flappyDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01))
+[2023-10-19 02:38:08] ERROR Connect database=flappyDB err=failed to connect to `host=database user=postgres database=flappyDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01)) host=database port=5432 time=8.66975ms
+[2023-10-19 02:38:08] ERROR AddRecord: error from service err=db: AddUserRecord: error query: failed to connect to `host=database user=postgres database=flappyDB`: failed SASL auth (FATAL: password authentication failed for user "postgres" (SQLSTATE 28P01))
+[2023-10-19 02:38:49]  INFO Connect database=flappyDB host=database pid=28 port=5432 time=23.901042ms
+[2023-10-19 02:38:49] ERROR Prepare err=ERROR: syntax error at or near "set" (SQLSTATE 42601) name=stmtcache_1 pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict set score = EXCLUDED.score
+		where score < EXCLUDED.score time=537.25µs
+[2023-10-19 02:38:49] ERROR Query args=[Misha 125] err=ERROR: syntax error at or near "set" (SQLSTATE 42601) pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict set score = EXCLUDED.score
+		where score < EXCLUDED.score time=922.333µs
+[2023-10-19 02:38:49] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: syntax error at or near "set" (SQLSTATE 42601)
+[2023-10-19 02:39:46]  INFO Connect database=flappyDB host=database pid=28 port=5432 time=26.679625ms
+[2023-10-19 02:39:46] ERROR Prepare err=ERROR: syntax error at or near "set" (SQLSTATE 42601) name=stmtcache_1 pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict set score = EXCLUDED.score
+		where score < EXCLUDED.score time=883.75µs
+[2023-10-19 02:39:46] ERROR Query args=[Misha 125] err=ERROR: syntax error at or near "set" (SQLSTATE 42601) pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict set score = EXCLUDED.score
+		where score < EXCLUDED.score time=1.915834ms
+[2023-10-19 02:39:46] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: syntax error at or near "set" (SQLSTATE 42601)
+[2023-10-19 02:39:47] ERROR Prepare err=ERROR: syntax error at or near "set" (SQLSTATE 42601) name=stmtcache_2 pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict set score = EXCLUDED.score
+		where score < EXCLUDED.score time=1.026875ms
+[2023-10-19 02:39:47] ERROR Query args=[Misha 125] err=ERROR: syntax error at or near "set" (SQLSTATE 42601) pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict set score = EXCLUDED.score
+		where score < EXCLUDED.score time=2.069958ms
+[2023-10-19 02:39:47] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: syntax error at or near "set" (SQLSTATE 42601)
+[2023-10-19 02:41:41]  INFO Connect database=flappyDB host=database pid=28 port=5432 time=30.556458ms
+[2023-10-19 02:41:41] ERROR Prepare err=ERROR: relation "records" does not exist (SQLSTATE 42P01) name=stmtcache_1 pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=822.542µs
+[2023-10-19 02:41:41] ERROR Query args=[Misha 125] err=ERROR: relation "records" does not exist (SQLSTATE 42P01) pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=1.201917ms
+[2023-10-19 02:41:41] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: relation "records" does not exist (SQLSTATE 42P01)
+[2023-10-19 02:41:46] ERROR Prepare err=ERROR: relation "records" does not exist (SQLSTATE 42P01) name=stmtcache_2 pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=351.042µs
+[2023-10-19 02:41:46] ERROR Query args=[Misha 125] err=ERROR: relation "records" does not exist (SQLSTATE 42P01) pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=2.169666ms
+[2023-10-19 02:41:46] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: relation "records" does not exist (SQLSTATE 42P01)
+[2023-10-19 02:49:40]  INFO Connect database=postgres host=database pid=32 port=5432 time=21.964334ms
+[2023-10-19 02:49:40] ERROR Prepare err=ERROR: relation "records" does not exist (SQLSTATE 42P01) name=stmtcache_1 pid=32 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=665.958µs
+[2023-10-19 02:49:40] ERROR Query args=[Misha 125] err=ERROR: relation "records" does not exist (SQLSTATE 42P01) pid=32 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=1.0065ms
+[2023-10-19 02:49:40] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: relation "records" does not exist (SQLSTATE 42P01)
+[2023-10-19 02:49:41] ERROR Prepare err=ERROR: relation "records" does not exist (SQLSTATE 42P01) name=stmtcache_2 pid=32 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=236.125µs
+[2023-10-19 02:49:41] ERROR Query args=[Misha 125] err=ERROR: relation "records" does not exist (SQLSTATE 42P01) pid=32 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=1.971917ms
+[2023-10-19 02:49:41] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: relation "records" does not exist (SQLSTATE 42P01)
+[2023-10-19 02:58:32]  INFO Connect database=flappyDB host=database pid=61 port=5432 time=18.618375ms
+[2023-10-19 02:58:32] ERROR Prepare err=ERROR: column reference "score" is ambiguous (SQLSTATE 42702) name=stmtcache_1 pid=61 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=1.0575ms
+[2023-10-19 02:58:32] ERROR Query args=[Misha 125] err=ERROR: column reference "score" is ambiguous (SQLSTATE 42702) pid=61 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=1.4245ms
+[2023-10-19 02:58:32] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: column reference "score" is ambiguous (SQLSTATE 42702)
+[2023-10-19 02:58:33] ERROR Prepare err=ERROR: column reference "score" is ambiguous (SQLSTATE 42702) name=stmtcache_2 pid=61 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=552.959µs
+[2023-10-19 02:58:33] ERROR Query args=[Misha 125] err=ERROR: column reference "score" is ambiguous (SQLSTATE 42702) pid=61 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where score < EXCLUDED.score time=1.569458ms
+[2023-10-19 02:58:33] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: column reference "score" is ambiguous (SQLSTATE 42702)
+[2023-10-19 03:01:40]  INFO Connect database=flappyDB host=database pid=28 port=5432 time=23.514166ms
+[2023-10-19 03:01:40] ERROR Prepare err=ERROR: missing FROM-clause entry for table "iic" (SQLSTATE 42P01) name=stmtcache_1 pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where iic.score < EXCLUDED.score time=1.546458ms
+[2023-10-19 03:01:40] ERROR Query args=[Misha 125] err=ERROR: missing FROM-clause entry for table "iic" (SQLSTATE 42P01) pid=28 sql=insert into records (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where iic.score < EXCLUDED.score time=1.846667ms
+[2023-10-19 03:01:40] ERROR AddRecord: error from service err=db: AddUserRecord: error query: ERROR: missing FROM-clause entry for table "iic" (SQLSTATE 42P01)
+[2023-10-19 03:03:28]  INFO Connect database=flappyDB host=database pid=28 port=5432 time=20.015208ms
+[2023-10-19 03:03:28]  INFO Prepare alreadyPrepared=false name=stmtcache_1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=1.584167ms
+[2023-10-19 03:03:28]  INFO Query args=[Misha 125] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=3.462208ms
+[2023-10-19 03:03:58]  INFO Prepare alreadyPrepared=false name=stmtcache_2 pid=28 sql=select score from records where nickname = $1 time=3.640209ms
+[2023-10-19 03:03:58]  INFO Query args=[Misha] commandTag=SELECT 1 pid=28 sql=select score from records where nickname = $1 time=7.426542ms
+[2023-10-19 03:04:03]  INFO Query args=[Misha 12] commandTag=INSERT 0 0 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=2.989375ms
+[2023-10-19 03:04:06]  INFO Query args=[Misha] commandTag=SELECT 1 pid=28 sql=select score from records where nickname = $1 time=470.708µs
+[2023-10-19 03:04:11]  INFO Query args=[Misha 315] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=5.35275ms
+[2023-10-19 03:04:13]  INFO Query args=[Misha] commandTag=SELECT 1 pid=28 sql=select score from records where nickname = $1 time=311.417µs
+[2023-10-19 03:04:53]  INFO Prepare alreadyPrepared=false name=stmtcache_3 pid=28 sql=select * from records order by score desc limit 10 time=2.046167ms
+[2023-10-19 03:04:53]  INFO Query args=[] commandTag=SELECT 1 pid=28 sql=select * from records order by score desc limit 10 time=5.882084ms
+[2023-10-19 03:05:13]  INFO Query args=[1 1] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=3.216333ms
+[2023-10-19 03:05:17]  INFO Query args=[2 2] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=2.008ms
+[2023-10-19 03:05:21]  INFO Query args=[3 3] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=2.884ms
+[2023-10-19 03:05:25]  INFO Query args=[4 3] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=1.377917ms
+[2023-10-19 03:05:28]  INFO Query args=[5 3] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=1.487083ms
+[2023-10-19 03:05:35]  INFO Query args=[6 6] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=1.673125ms
+[2023-10-19 03:05:40]  INFO Query args=[7 7] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=2.754334ms
+[2023-10-19 03:05:45]  INFO Query args=[8 8] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=2.946583ms
+[2023-10-19 03:05:50]  INFO Query args=[9 9] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=1.523084ms
+[2023-10-19 03:05:57]  INFO Query args=[10 10] commandTag=INSERT 0 1 pid=28 sql=insert into records as r (nickname, score) values ($1, $2)
+		on conflict (nickname) do 
+		update set score = EXCLUDED.score
+		where r.score < EXCLUDED.score time=1.53575ms
+[2023-10-19 03:06:00]  INFO Query args=[Misha] commandTag=SELECT 1 pid=28 sql=select score from records where nickname = $1 time=745.667µs

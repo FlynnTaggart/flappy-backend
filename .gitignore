@@ -1,0 +1,9 @@
+# Idea files
+
+.idea
+
+# MacOS files
+.DS_Store
+
+#logs
+*/logs/
